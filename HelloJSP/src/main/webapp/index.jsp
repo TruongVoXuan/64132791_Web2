@@ -11,5 +11,17 @@
 <body>
 <h1>HELLO JSP-64132791 VoXuanTruong</h1>
 <%= new Date().toString() %>
+<%
+int x;
+x=5;
+int y=x+99;
+%>
+<hr>
+<%=y %>
+
+<hr>
+<%
+out.print(y);
+%>
 </body>
 </html>
