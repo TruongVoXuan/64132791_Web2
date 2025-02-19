@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Tinh Toan Co Ban</title>
+    <meta charset="UTF-8">
+    <title>Tính Toán Cơ Bản</title>
+    <script type="text/javascript">
+        // Hàm chọn phép toán và gán giá trị cho trường hidden
+        function selectOperation(button) {
+            var operation = document.getElementById('selectedOperation');
+            operation.value = button.value;  // Cập nhật giá trị của input hidden
+        }
+    </script>
 </head>
 <body>
-   <form action="tinhtoan.jsp" method="post">
+    <form action="tinhtoan.jsp" method="post">
         <label for="a">a =</label>
         <input type="number" id="a" name="a" required>
         <br>
