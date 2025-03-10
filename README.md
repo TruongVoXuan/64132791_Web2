@@ -19,30 +19,26 @@
 ---
 ---
 [![](https://visitcount.itsvg.in/api?id=TruongVoXuan&icon=0&color=0)](https://visitcount.itsvg.in)
-## Exercise 1: Basic Java Program
+## MỘT SỐ BÀI TẬP CƠ BẢN
 
 **MÔ TẢ:** HIỂN THỊ THÔNG TIN SINH VIÊN CƠ BẢN
 
 - **Directory:** [XEM CHI TIẾT](https://github.com/TruongVoXuan/64132791_Web2/tree/main/AboutMe)
 - **Picture:** ![image](https://github.com/user-attachments/assets/4a2ec6fd-0672-4749-81f4-24700426167d)
 
+
+**MÔ TẢ:** TÍNH BMI
+
+- **Directory:** [XEM CHI TIẾT](https://github.com/TruongVoXuan/64132791_Web2/tree/main/BMI)
+- **Picture:** ![image](https://github.com/user-attachments/assets/6b8aea96-cfaa-4f9e-b44f-f9ddea26f440)
+
+
+
+
 ## Exercise 2: Web Application with Spring Boot
 
-**Description:** Develop a basic web application using Spring Boot that displays a welcome message.
+**MÔ TẢ:** HIỂN THỊ THÔNG TIN SINH VIÊN CƠ BẢN
 
-- **Directory:** [Exercise 2](./exercise2)
-- **Main File:** [Application.java](./exercise2/src/main/java/com/example/Application.java)
+- **Directory:** [XEM CHI TIẾT](https://github.com/TruongVoXuan/64132791_Web2/tree/main/SB_TruyenDuLieuSangView)
+- **Picture:** ![image](https://github.com/user-attachments/assets/b9ddae6e-f2b5-4e73-a28e-d048695bd706)
 
-## Exercise 3: RESTful API Development
-
-**Description:** Create a RESTful API using Node.js and Express that manages a list of users.
-
-- **Directory:** [Exercise 3](./exercise3)
-- **Main File:** [server.js](./exercise3/server.js)
-
-## Exercise 4: Data Analysis with Python
-
-**Description:** Perform data analysis on a dataset using Python and Pandas.
-
-- **Directory:** [Exercise 4](./exercise4)
-- **Main File:** [analysis.py](./exercise4/analysis.py)
