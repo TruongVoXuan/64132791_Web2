@@ -35,7 +35,7 @@
 
 
 
-## Exercise 2: Web Application with Spring Boot
+## Web Application with Spring Boot
 
 **MÔ TẢ:** HIỂN THỊ THÔNG TIN SINH VIÊN CƠ BẢN
 
