@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông Tin Sinh Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            text-align: left;
+            border-radius: 5px 5px 0 0;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thông Tin Sinh Viên</h2>
+        <table>
+            <tr>
+                <th>MSSV</th>
+                <td th:text="${mssv}"></td>
+            </tr>
+            <tr>
+                <th>Họ Tên</th>
+                <td th:text="${hoten}"></td>
+            </tr>
+            <tr>
+                <th>Năm Sinh</th>
+                <td th:text="${namsinh}"></td>
+            </tr>
+            <tr>
+                <th>Giới Tính</th>
+                <td th:text="${gioitinh}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
