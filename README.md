@@ -17,4 +17,28 @@
 <img src="https://random-memer.herokuapp.com/" width="512px"/>
 
 ---
+---
 [![](https://visitcount.itsvg.in/api?id=TruongVoXuan&icon=0&color=0)](https://visitcount.itsvg.in)
+## MỘT SỐ BÀI TẬP CƠ BẢN
+
+**MÔ TẢ:** HIỂN THỊ THÔNG TIN SINH VIÊN CƠ BẢN
+
+- **Directory:** [XEM CHI TIẾT](https://github.com/TruongVoXuan/64132791_Web2/tree/main/AboutMe)
+- **Picture:** ![image](https://github.com/user-attachments/assets/4a2ec6fd-0672-4749-81f4-24700426167d)
+
+
+**MÔ TẢ:** TÍNH BMI
+
+- **Directory:** [XEM CHI TIẾT](https://github.com/TruongVoXuan/64132791_Web2/tree/main/BMI)
+- **Picture:** ![image](https://github.com/user-attachments/assets/6b8aea96-cfaa-4f9e-b44f-f9ddea26f440)
+
+
+
+
+## Web Application with Spring Boot
+
+**MÔ TẢ:** HIỂN THỊ THÔNG TIN SINH VIÊN CƠ BẢN
+
+- **Directory:** [XEM CHI TIẾT](https://github.com/TruongVoXuan/64132791_Web2/tree/main/SB_TruyenDuLieuSangView)
+- **Picture:** ![image](https://github.com/user-attachments/assets/b9ddae6e-f2b5-4e73-a28e-d048695bd706)
+
