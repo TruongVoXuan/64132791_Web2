@@ -17,7 +17,7 @@ public String dsSinhVien(Model model)
 	dsSinhVien.add(new SinhVien(64132793, "Nguyễn Văn B", "5/01/2004", "Nam"));
 	dsSinhVien.add(new SinhVien(64132791, "Nguyễn Văn C", "15/01/2004", "Nam"));
 	
-	model.addAttribute("viewDsSv",dsSinhVien);
+	model.addAttribute("ds",dsSinhVien);
 	return "viewDsSv";
 }
 }

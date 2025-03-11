@@ -60,7 +60,7 @@
                 <th>Ngày Sinh</th>
                 <th>Giới Tính</th>
             </tr>
-            <tr th:each="sv : ${viewDsSv}">
+            <tr th:each="sv : ${ds}">
                 <td th:text="${sv.mssv}"></td>
                 <td th:text="${sv.name}"></td>
                 <td th:text="${sv.year_of_birth}"></td>
