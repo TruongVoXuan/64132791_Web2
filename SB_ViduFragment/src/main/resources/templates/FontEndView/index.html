@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TRANG CHỦ</title>
+</head>
+<body>
+   <table border="2" width="100%">
+   		<tr height="100px">
+   			<td colspan="2">
+   			    <div th:replace="FontEndView/FontEndModel :: dauTrang"></div>
+   			</td>
+   		</tr>
+   	
+   		<tr height="450px">
+   			<td width="800px">NOI DUNG</td>
+   			<td>SIDE BAR</td>
+   		</tr>
+   		
+   		<tr height="450px">
+   			<td colspan="2">
+   			    <div th:replace="FontEndView/FontEndModel :: chanTrang"></div>
+   			</td>
+   		</tr>
+   </table>
+</body>
+</html>
