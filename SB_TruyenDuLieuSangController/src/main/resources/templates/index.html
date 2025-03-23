@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nhập tên</title>
+</head>
+<body>
+    <h2>Nhập tên của bạn</h2>
+    <form action="/result" method="get">
+        <input type="text" name="name" placeholder="Nhập tên">
+        <button type="submit">Gửi</button>
+    </form>
+
+    <h3 th:if="${userName != null}">Tên của bạn: <span th:text="${userName}"></span></h3>
+</body>
+</html>
