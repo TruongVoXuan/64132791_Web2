@@ -9,4 +9,8 @@ public class HomeController {
     public String trangChu() {
         return "FontEndView/index";  
     }
+    @GetMapping("/about")
+	public String gioiThieu() {
+		return "FontEndView/about";
+	}
 }
