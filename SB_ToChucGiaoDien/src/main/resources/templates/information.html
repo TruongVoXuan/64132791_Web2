@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        /* Sidebar CSS */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #343a40;
+            position: fixed;
+            top: 56px; /* Đảm bảo sidebar nằm dưới header */
+            left: 0;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .sidebar .nav-link {
+            color: #ffc107;
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar .nav-link:hover {
+            background: #495057;
+        }
+        .sidebar .active {
+            background: #007bff;
+        }
+        .sidebar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffc107;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000; /* Đảm bảo footer luôn ở dưới cùng */
+        }
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header th:replace="fragments/header :: header"></header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" th:replace="fragments/sidebar :: sidebar_layout"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h2>THÔNG TIN SINH VIÊN</h2>
+        <p>VÕ XUÂN TRƯỜNG.</p>
+        <p>64CNTTCLC.</p>
+        <p>25/01/2004.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer th:replace="fragments/footer :: footer_layout" class="footer"></footer>
+
+    <!-- Link Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
