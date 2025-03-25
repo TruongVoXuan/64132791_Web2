@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            background-color: rgba(255, 255, 255, 0.8); /* Màu nền cho footer để phù hợp với header */
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000; /* Đảm bảo footer luôn ở dưới cùng */
+        }
+        .footer a {
+            color: #000;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #343a40;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div th:fragment="footer_layout" class="footer">
+        <p>VÕ XUÂN TRƯỜNG.</p>
+    </div>
+</body>
+</html>
