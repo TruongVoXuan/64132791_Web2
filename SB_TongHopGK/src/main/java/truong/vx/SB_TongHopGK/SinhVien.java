@@ -3,8 +3,8 @@ package truong.vx.SB_TongHopGK;
 public class SinhVien {
 	private int mssv;
 	private String name;
-	private float diemTB;
-	public SinhVien(int mssv, String name, float diemTB) {
+	private double diemTB;
+	public SinhVien(int mssv, String name, double diemTB) {
 		super();
 		this.mssv = mssv;
 		this.name = name;
@@ -22,10 +22,10 @@ public class SinhVien {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public float getDiemTB() {
+	public double getDiemTB() {
 		return diemTB;
 	}
-	public void setDiemTB(float diemTB) {
+	public void setDiemTB(double diemTB) {
 		this.diemTB = diemTB;
 	}
 	
