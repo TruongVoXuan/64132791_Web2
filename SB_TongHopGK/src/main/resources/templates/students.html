@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>ABOUT</title>
+    <title>Student List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/styles.css"> <!-- Đảm bảo đúng đường dẫn tới CSS của bạn -->
+    <link rel="stylesheet" href="/css/styles.css">
     <style>
         .content {
             margin-top: 110px; /* Đảm bảo nội dung nằm dưới header */
@@ -31,25 +31,40 @@
         }
     </style>
 </head>
-
 <body>
-    <!-- Header fragment -->
-    <header th:replace="fragments/header :: head_layout"></header>
 
-    <!-- Main content section -->
+    <!-- Header -->
+    <header th:replace="fragments/header::head_layout"></header>
+
     <div class="container">
-        <div class="content">
-            <h2>About</h2>
-            <p>MSSV: <span th:text="${mssv}"></span></p>
-            <p>Họ tên: <span th:text="${hoten}"></span></p>
-            <p>Năm sinh: <span th:text="${year}"></span></p>
+        <!-- Sidebar -->
+        <aside class="sidebar" th:replace="fragments/sidebar::sidebar_layout"></aside>
+
+        <!-- Nội dung chính -->
+        <div class="main-content">
+            <h1>Danh Sách Sinh Viên</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ Tên</th>
+                        <th>Điểm TB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="sv : ${listSV}">
+                        <td th:text="${sv.MSSV}"></td>
+                        <td th:text="${sv.hoTen}"></td>
+                        <td th:text="${sv.diemTB}"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <!-- Footer fragment -->
-    <footer th:replace="fragments/footer :: footer_layout"></footer>
+    <!-- Footer -->
+    <footer th:replace="fragments/footer::footer_layout"></footer>
 
-    <!-- Link Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

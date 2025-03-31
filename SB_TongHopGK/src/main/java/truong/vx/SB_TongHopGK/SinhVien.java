@@ -1,31 +1,31 @@
 package truong.vx.SB_TongHopGK;
 
 public class SinhVien {
-	private int mssv;
-	private String name;
-	private double diemTB;
-	public SinhVien(int mssv, String name, double diemTB) {
-		super();
-		this.mssv = mssv;
-		this.name = name;
+	private String MSSV;
+	private String hoTen;
+	private float diemTB;
+	public SinhVien(String mSSV, String hoTen, float diemTB) {
+		
+		MSSV = mSSV;
+		this.hoTen = hoTen;
 		this.diemTB = diemTB;
 	}
-	public int getMssv() {
-		return mssv;
+	public String getMSSV() {
+		return MSSV;
 	}
-	public void setMssv(int mssv) {
-		this.mssv = mssv;
+	public void setMSSV(String mSSV) {
+		MSSV = mSSV;
 	}
-	public String getName() {
-		return name;
+	public String getHoTen() {
+		return hoTen;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setHoTen(String hoTen) {
+		this.hoTen = hoTen;
 	}
-	public double getDiemTB() {
+	public float getDiemTB() {
 		return diemTB;
 	}
-	public void setDiemTB(double diemTB) {
+	public void setDiemTB(float diemTB) {
 		this.diemTB = diemTB;
 	}
 	
