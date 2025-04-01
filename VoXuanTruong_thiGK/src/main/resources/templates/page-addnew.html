@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Danh sách Pages</title>
+    <title>Thêm Page Mới</title>
     <link rel="stylesheet" th:href="@{/css/sb-admin-2.css}">
     <style>
         .container {
-            margin-top: 50px;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
         }
         h2 {
             text-align: center;
-            margin-bottom: 20px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .btn-add {
+        .form-group {
             margin-bottom: 15px;
         }
     </style>
@@ -31,36 +23,23 @@
 <body>
 
     <div class="container">
-        <h2>Danh sách các Page</h2>
-
-        <!-- Nút thêm mới Page -->
-        <a th:href="@{/page/new}" class="btn btn-primary btn-add">Thêm Page Mới</a>
-
-        <table class="table table-bordered">
-            <thead class="thead-light">
-                <tr>
-                    <th>ID</th>
-                    <th>Page Name</th>
-                    <th>Keyword</th>
-                    <th>Content</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="page : ${pages}">
-                    <td th:text="${page.id}"></td>
-                    <td th:text="${page.pageName}"></td>
-                    <td th:text="${page.keyword}"></td>
-                    <td th:text="${page.content}"></td>
-                    <td>
-                        <a th:href="@{/page/view/{id}(id=${page.id})}" class="btn btn-info btn-sm">Xem</a>
-                        <a th:href="@{/page/edit/{id}(id=${page.id})}" class="btn btn-warning btn-sm">Sửa</a>
-                        <a th:href="@{/page/delete/{id}(id=${page.id})}" class="btn btn-danger btn-sm"
-                           onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <h2>Thêm Page Mới</h2>
+        <form th:action="@{/page/new}" method="post" th:object="${page}">
+            <div class="form-group">
+                <label for="pageName">Tên Page:</label>
+                <input type="text" id="pageName" name="pageName" class="form-control" th:field="*{pageName}" required>
+            </div>
+            <div class="form-group">
+                <label for="keyword">Từ khóa:</label>
+                <input type="text" id="keyword" name="keyword" class="form-control" th:field="*{keyword}" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Nội dung:</label>
+                <textarea id="content" name="content" class="form-control" th:field="*{content}" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Thêm Page</button>
+            <a th:href="@{/page/all}" class="btn btn-secondary">Quay lại</a>
+        </form>
     </div>
 
 </body>
