@@ -6,6 +6,11 @@ public class Page {
     private String keyword;
     private String content;
 
+
+    public Page() {
+    }
+
+
     public Page(int id, String pageName, String keyword, String content) {
         this.id = id;
         this.pageName = pageName;
@@ -13,6 +18,7 @@ public class Page {
         this.content = content;
     }
 
+    // Getter và Setter
     public int getId() {
         return id;
     }

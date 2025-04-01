@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách Pages</title>
+    <link rel="stylesheet" th:href="@{/css/sb-admin-2.css}">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn-add {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Danh sách các Page</h2>
+
+        <!-- Nút thêm mới Page -->
+        <a th:href="@{/page/new}" class="btn btn-primary btn-add">Thêm Page Mới</a>
+
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Page Name</th>
+                    <th>Keyword</th>
+                    <th>Content</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="page : ${pages}">
+                    <td th:text="${page.id}"></td>
+                    <td th:text="${page.pageName}"></td>
+                    <td th:text="${page.keyword}"></td>
+                    <td th:text="${page.content}"></td>
+                    <td>
+                        <a th:href="@{/page/view/{id}(id=${page.id})}" class="btn btn-info btn-sm">Xem</a>
+                        <a th:href="@{/page/edit/{id}(id=${page.id})}" class="btn btn-warning btn-sm">Sửa</a>
+                        <a th:href="@{/page/delete/{id}(id=${page.id})}" class="btn btn-danger btn-sm"
+                           onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
