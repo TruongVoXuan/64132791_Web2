@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách Pages</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Danh sách các Page</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Page Name</th>
+                <th>Keyword</th>
+                <th>Content</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="page : ${pages}">
+                <td th:text="${page.id}"></td>
+                <td th:text="${page.pageName}"></td>
+                <td th:text="${page.keyword}"></td>
+                <td th:text="${page.content}"></td>
+                <td>
+                    <a th:href="@{/page/view/{id}(id=${page.id})}">[View]</a>
+                    <a th:href="@{/page/edit/{id}(id=${page.id})}">[Edit]</a>
+                    <a th:href="@{/page/delete/{id}(id=${page.id})}" onclick="return confirm('Bạn có chắc muốn xóa?')">[Delete]</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
