@@ -2,9 +2,7 @@ package thiGK.ntu64132791.VoXuanTruong_thiGK;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import thiGK.ntu64132791.VoXuanTruong_thiGK.Model.Page;
 
 import java.util.ArrayList;
@@ -30,14 +28,31 @@ public class PageController {
 
     @GetMapping("/page/new")
     public String showAddPageForm(Model model) {
-        model.addAttribute("page", new Page()); // Tạo object rỗng để bind với form
-        return "page-addnew"; // Trả về file page-addnew.html trong templates
+        model.addAttribute("page", new Page());
+        return "page-addnew";
     }
 
     @PostMapping("/page/new")
     public String addNewPage(@ModelAttribute Page page) {
-        page.setId(pages.size() + 1); // Gán ID tự động
-        pages.add(page); // Thêm vào danh sách
-        return "redirect:/page/all"; // Chuyển hướng về danh sách pages
+        page.setId(pages.size() + 1);
+        pages.add(page);
+        return "redirect:/page/all";
+    }
+
+    @GetMapping("/page/view/{id}")
+    public String viewPage(@PathVariable int id, Model model) {
+        for (Page p : pages) {
+            if (p.getId() == id) {
+                model.addAttribute("page", p);
+                return "page-view";
+            }
+        }
+        return "redirect:/page/all";
+    }
+
+    @GetMapping("/page/delete/{id}") // ✅ Đã sửa đúng đường dẫn
+    public String deletePage(@PathVariable int id) {
+        pages.removeIf(p -> p.getId() == id);
+        return "redirect:/page/all";
     }
 }

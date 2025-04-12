@@ -3,6 +3,7 @@ package thiGK.ntu64132791.VoXuanTruong_thiGK;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import thiGK.ntu64132791.VoXuanTruong_thiGK.Model.Page;
 import thiGK.ntu64132791.VoXuanTruong_thiGK.Model.Post;
@@ -48,6 +49,7 @@ public class HomeController {
         model.addAttribute("pages", pages);
         return "page-list";
     }
+   
 
     @GetMapping("/posts")
     public String getPosts(Model model) {

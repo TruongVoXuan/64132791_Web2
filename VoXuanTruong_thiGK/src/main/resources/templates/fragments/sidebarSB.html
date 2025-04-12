@@ -1,17 +1,15 @@
-<!-- sidebarSB.html -->
-<div class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<div th:fragment="sidebarSB" xmlns:th="http://www.thymeleaf.org"
+     class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-    <div class="sidebar-brand-icon rotate-n-15">
-        <!-- Thêm ảnh logo -->
-        <img src="/img/logo.png" alt="Logo" style="width: 40px; height: 40px;">
-    </div>
-</a>
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/}">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <img th:src="@{/img/logo.png}" alt="Logo" style="width: 40px; height: 40px;">
+        </div>
+    </a>
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
-
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -21,42 +19,44 @@
         Quản lý Nội dung
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Quản lý Trang</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Trang:</h6>
-                <a class="collapse-item" th:href="@{/page/all}">Page-List</a>
-                <a class="collapse-item" th:href="@{/page/new}">Page-Addnew</a>
-            </div>
-        </div>
-    </li>
+    <ul class="nav flex-column">
+        <!-- Nav Item - Page List -->
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/page/all}">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>Page-List</span>
+            </a>
+        </li>
 
-    <!-- Nav Item - Posts Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePosts"
-            aria-expanded="true" aria-controls="collapsePosts">
-            <i class="fas fa-fw fa-file-alt"></i>
-            <span>Quản lý Bài viết</span>
-        </a>
-        <div id="collapsePosts" class="collapse" aria-labelledby="headingPosts" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Bài viết:</h6>
-                <a class="collapse-item" th:href="@{/posts}">Post-List</a>
-                <a class="collapse-item" th:href="@{/posts/add}">Post-Addnew</a>
-            </div>
-        </div>
-    </li>
+        <!-- Nav Item - Page Add New -->
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/page/new}">
+                <i class="fas fa-fw fa-plus-circle"></i>
+                <span>Page-Addnew</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Post List -->
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/posts}">
+                <i class="fas fa-fw fa-file-alt"></i>
+                <span>Post-List</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Post Add New -->
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/posts/add}">
+                <i class="fas fa-fw fa-plus-circle"></i>
+                <span>Post-Addnew</span>
+            </a>
+        </li>
+    </ul>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
-    <!-- Sidebar Toggler (Sidebar) -->
+    <!-- Sidebar Toggler -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
