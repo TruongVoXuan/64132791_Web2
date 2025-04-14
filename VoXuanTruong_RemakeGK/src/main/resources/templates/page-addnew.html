@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/headTagSB"/>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div th:replace="fragments/sidebarSB"/>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <div th:replace="fragments/topBarSB"/>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="container">
+                        <h2>Thêm Page Mới</h2>
+                        <form th:action="@{/page/new}" method="post" th:object="${page}">
+                            <div class="form-group">
+                                <label for="pageName">Tên Page:</label>
+                                <input type="text" id="pageName" name="pageName" class="form-control" th:field="*{pageName}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="keyword">Từ khóa:</label>
+                                <input type="text" id="keyword" name="keyword" class="form-control" th:field="*{keyword}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="content">Nội dung:</label>
+                                <textarea id="content" name="content" class="form-control" th:field="*{content}" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">Thêm Page</button>
+                            <a th:href="@{/page/all}" class="btn btn-secondary">Quay lại</a>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <div th:replace="fragments/bottomSB"/>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+   
+ 
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
+</body>
+</html>

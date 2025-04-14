@@ -18,7 +18,7 @@ public class Page {
         this.content = content;
     }
 
-    // Getter và Setter
+    
     public int getId() {
         return id;
     }

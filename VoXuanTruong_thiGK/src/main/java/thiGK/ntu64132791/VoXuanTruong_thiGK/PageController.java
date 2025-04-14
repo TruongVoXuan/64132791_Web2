@@ -50,7 +50,7 @@ public class PageController {
         return "redirect:/page/all";
     }
 
-    @GetMapping("/page/delete/{id}") // ✅ Đã sửa đúng đường dẫn
+    @GetMapping("/page/delete/{id}") 
     public String deletePage(@PathVariable int id) {
         pages.removeIf(p -> p.getId() == id);
         return "redirect:/page/all";
