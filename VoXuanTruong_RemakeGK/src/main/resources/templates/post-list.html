@@ -1,0 +1,39 @@
+<div th:replace="fragments/headTagSB"/>
+<body id="page-top">
+<div id="wrapper">
+    <div th:replace="fragments/sidebarSB"/>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div th:replace="fragments/topBarSB"/>
+
+            <div class="container-fluid">
+                <h2>Danh sách Bài viết</h2>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tiêu đề</th>
+                        <th>Category ID</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="post : ${posts}">
+                        <td th:text="${post.id}"></td>
+                        <td th:text="${post.title}"></td>
+                        <td th:text="${post.categoryId}"></td>
+                        <td>
+                            <a th:href="@{/post/view/{id}(id=${post.id})}">[View]</a>
+                            <a href="#">[Edit]</a>
+                            <a th:href="@{/post/delete/{id}(id=${post.id})}"
+                               onclick="return confirm('Xác nhận xoá?')">[Delete]</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div th:replace="fragments/bottomSB"/>
+    </div>
+</div>
+</body>
