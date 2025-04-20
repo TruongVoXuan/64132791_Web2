@@ -48,6 +48,12 @@ public class PostController {
 	     }
 	     return "redirect:/post/all";
 	 }
+	 
+	 @GetMapping("/post/delete/{id}")
+	    public String deletePost(@PathVariable int id) {
+	        posts.removeIf(p -> p.getId() == id);
+	        return "redirect:/post/all";
+	    }
 
 	
 	
